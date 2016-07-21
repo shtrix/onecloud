@@ -219,23 +219,25 @@ class OneCloudApi(object):
         }
         return self.req(path='/server', method='POST', data=data)
 
-    def update_server_parameters(self, server_id, cpu, ram, hdd, hdd_type, is_high_perfomance):
+    def update_server_parameters(self, server_id, cpu, ram, hdd, hdd_type, is_high_performance):
         """
         Изменение конфигурации сервера
-        :param server_id:
-        :param cpu:
-        :param ram:
-        :param hdd:
-        :param hdd_type:
-        :param is_high_perfomance:
-        :return:
+        :param server_id: Id сервера с изменяемой конфигурацией
+        :param cpu: Количество ядер процессора, выделенных на данный сервер [1...8]. Шаг увеличения значений: 1.
+        :param ram: Объем ОЗУ в Мб. Linux: [512...16384], Windows: [1024...16384]
+                    Шаг увеличения значений: до 1024 шаг 256, после 1024 шаг составляет 1024.
+        :param hdd: Количество дискового пространства, выделенного на данный сервер (в Gb).
+                    Linux: [10...250], Windows: [40...250] Шаг увеличения значений: 10.
+        :param hdd_type: Тип диска сервера, может быть одним из следующих значений "SAS" или "SSD"
+        :param is_high_performance: True - если необходим сервер в высокопроизводительном пуле, false - в базовом пуле.
+        :return: JSON объект - атрибуты созданного сервера.
         """
         data = {
             'CPU': cpu,
             'RAM': ram,
             'HDD': hdd,
             'HDDType': hdd_type,
-            'isHighPerformance': is_high_perfomance
+            'isHighPerformance': is_high_performance
         }
         return self.req(path='/server/{}'.format(server_id), method='PUT', data=data)
 
