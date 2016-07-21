@@ -18,7 +18,7 @@ setup(
     author='Vitaly Kunitsa',
     author_email='Vitaly.Steel@gmail.com',
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
