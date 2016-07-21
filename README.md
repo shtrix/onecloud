@@ -1,5 +1,5 @@
 # OneCloud API
-API клиент для управления серверами на платформе [1Cloud.ru](https://1cloud.ru/ref/17308)
+API клиент для управления серверами на платформе [https://1Cloud.ru](https://1cloud.ru/ref/17308)
 
 # Установка
 Воспользуйтесь `pip` или `easy_install`:
