@@ -11,6 +11,9 @@ setup(
     name='onecloud',
     version=__import__('onecloud').__version__,
     packages=find_packages(exclude=["tests.*", "tests"]),
+    install_requires=[
+        'requests'
+    ],
     include_package_data=True,
     license='Apache License',  # example license
     description='API for 1Cloud.ru',
