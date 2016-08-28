@@ -21,7 +21,7 @@ Python 2.6 or 2.7, 3.3+ полностью поддерживаются.
 # Использование
 ```python
 from onecloud import api
-a = api.OneCloud(api_key='API ключ из личного кабинета', timeout=5)
+a = api.OneCloudApi(api_key='API ключ из личного кабинета', timeout=5)
 ```
 
 #Возможности:
